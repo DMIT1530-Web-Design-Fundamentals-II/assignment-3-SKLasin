@@ -1,14 +1,14 @@
 :root {
     /** colours **/
-    --yellow:           #FED766; 
+    --yellow: #FED766;
     --lt-seafoam-green: #ecf9f6;
-    --seafoam-green:    #43C6AC;
-    --md-blue:          #191654;
-    --dk-blue:          #0C0B2A;
-    --blue-grey:        #6B717E;
+    --seafoam-green: #43C6AC;
+    --md-blue: #191654;
+    --dk-blue: #0C0B2A;
+    --blue-grey: #6B717E;
 
     /** typography **/
-    --headings:'Monoton', cursive;
+    --headings: 'Monoton', cursive;
     --body: 'Rubik', sans-serif;
 }
 
@@ -19,4 +19,176 @@
     width: 0.1rem;
     height: 0.1rem;
     visibility: hidden;
+}
+
+body {
+    font-family: var(--body);
+    margin: 0;
+    padding: 0;
+    color: var(--lt-seafoam-green);
+    background: linear-gradient(to bottom, #3AB4A1, #0C0B2A);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--lt-seafoam-green);
+}
+
+.logo {
+    width: 160px;
+}
+
+.logo svg {
+    width: 100%;
+    height: auto;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle .menu-icon {
+    width: 24px;
+    height: 4px;
+    background-color: var(--md-blue);
+    display: block;
+    position: relative;
+    border-radius: 2px;
+}
+
+.menu-toggle .menu-icon::before,
+.menu-toggle .menu-icon::after {
+    content: '';
+    width: 24px;
+    height: 4px;
+    background-color: var(--md-blue);
+    position: absolute;
+    left: 0;
+    border-radius: 2px;
+}
+
+.menu-toggle .menu-icon::before {
+    top: -8px;
+}
+
+.menu-toggle .menu-icon::after {
+    top: 8px;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.intro h1 {
+    font-family: var(--headings);
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    color: var(--lt-seafoam-green);
+}
+
+.intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: var(--lt-seafoam-green);
+}
+
+.btn-primary,
+.btn-secondary {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background-color: var(--seafoam-green);
+    color: var(--dk-blue);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--lt-seafoam-green);
+    color: var(--lt-seafoam-green);
+}
+
+/* Mobile Menu Styles */
+
+.mobile-menu {
+    display: none;
+    background-color: var(--lt-seafoam-green);
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu ul li {
+    margin: 15px 0;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--seafoam-green);
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--md-blue);
+    text-transform: uppercase;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    background-color: var(--lt-seafoam-green);
+    border-radius: 25px;
+    border: 1px solid var(--md-blue);
+}
+
+.search-bar svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    color: var(--md-blue);
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--md-blue);
+    background-color: transparent;
+}
+
+.show-menu {
+    display: block;
 }
