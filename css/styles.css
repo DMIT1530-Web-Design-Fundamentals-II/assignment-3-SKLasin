@@ -456,3 +456,84 @@ a.btn-primary:hover svg {
     color: var(--seafoam-green);
     /* Color for App Design & Development */
 }
+
+/* who-we-are */
+
+.who-we-are {
+    padding: 50px;
+    background-color: var(--seafoam-green);
+    color: var(--md-blue);
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.who-we-are-header h2 {
+    font-family: var(--headings);
+    font-size: 1.8rem;
+    color: var(--md-blue);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.who-we-are-header h2::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: #ffffff;
+    margin-top: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: var(--md-blue);
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    background-color: var(--lt-seafoam-green);
+    color: var(--md-blue) !important;
+    border: 2px solid var(--md-blue);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-primary:hover {
+    background-color: var(--md-blue);
+}
+
+.btn-primary svg {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    fill: var(--md-blue);
+}
+
+.btn-primary:hover svg {
+    fill: #fff;
+}
+
+
+.team-photo {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
