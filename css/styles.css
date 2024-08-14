@@ -304,15 +304,155 @@ header {
     /* Custom color for card 8 */
 }
 
-.view-all-work {
-    display: block;
-    margin: 20px auto 0;
-    padding: 10px 20px;
-    text-align: center;
-    background-color: var(--md-blue);
-    color: var(--lt-seafoam-green);
+a.view-all-work,
+a.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    background-color: transparent;
+    color: var(--seafoam-green);
+    border: 2px solid var(--md-blue);
     border-radius: 5px;
-    text-decoration: none;
+    text-transform: uppercase;
     font-weight: bold;
-    max-width: 200px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a.view-all-work svg,
+a.btn-primary svg {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+a.view-all-work:hover,
+a.btn-primary:hover {
+    background-color: var(--md-blue);
+    color: #fff;
+}
+
+a.view-all-work:hover svg,
+a.btn-primary:hover svg {
+    fill: #fff;
+}
+
+
+/* what-we-do-header */
+
+.what-we-do {
+    padding: 35px;
+    background-color: #fff;
+    color: var(--md-blue);
+    text-align: center;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.what-we-do-header {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.what-we-do-header h2 {
+    font-family: var(--headings);
+    font-size: 1.8rem;
+    color: var(--md-blue);
+    margin: 0;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+.what-we-do-header h2::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: var(--seafoam-green);
+    margin-top: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: var(--md-blue);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1px 10px;
+    background-color: transparent;
+    color: var(--md-blue);
+    border: 2px solid var(--md-blue);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--md-blue);
+    color: #fff;
+}
+
+/* services */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 10px;
+    background-color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.service-item {
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-family: var(--body);
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--md-blue);
+}
+
+/* Custom colors for each service */
+.service-item:nth-child(1) h3 {
+    color: var(--seafoam-green);
+    /* Color for Branding */
+}
+
+.service-item:nth-child(2) h3 {
+    color: var(--seafoam-green);
+    /* Color for Web Design */
+}
+
+.service-item:nth-child(3) h3 {
+    color: var(--seafoam-green);
+    /* Color for App Design & Development */
 }
